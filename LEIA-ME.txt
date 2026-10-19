@@ -1,0 +1,19 @@
+COMERCIAL CONCEITO DO MERCADO LIVRE (projeto Remotion)
+Anúncio conceito, não oficial. Feito com o Claude Code, sem After Effects.
+
+COMO RODAR
+1. Instale o Node (versão 20 ou mais nova): nodejs.org
+2. Abra esta pasta no terminal e rode:  npm install
+3. Para ver e mexer no navegador:       npm run dev
+4. Para gerar o vídeo (sem som):        npm run render   → sai em out/ml-filme.mp4
+
+Ou abra a pasta no Claude Code e peça: "instala e roda esse projeto pra mim".
+
+O QUE TEM AQUI
+- src/projects/mercado-livre/: as cenas (Cena1 = logo, Telas = telas do app, Mapa = mapa 3D, Caixa = caixa na porta, Filme = o filme inteiro e a câmera).
+- public/: fontes (Figtree e Inter, licença OFL), fotos do fone e o fundo da caixa.
+- A música não vem junto: escolha a sua e junte no fim.
+
+CRÉDITOS
+- Fone 3D: modelo de Zalanekee, licença CC BY 4.0.
+- Preço, frete e textos da tela são de exemplo.
