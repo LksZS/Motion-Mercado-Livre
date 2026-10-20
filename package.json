@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "remotion studio src/index.ts",
-    "render": "remotion render src/index.ts ml-filme out/ml-filme.mp4"
+    "render": "remotion render src/index.ts ml-filme out/ml-filme.mp4",
+    "postinstall": "bash setup-chromium.sh"
   },
   "dependencies": {
     "@react-three/fiber": "9.8.1",

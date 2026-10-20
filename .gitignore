@@ -1,0 +1,4 @@
+node_modules/
+bin/chromium-bin
+out/
+.remotion/
