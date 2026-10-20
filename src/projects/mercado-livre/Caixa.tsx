@@ -59,7 +59,6 @@ const LUZ = "#FFC400";
 
 // câmera: tela = Q + (p − CENTRO)·S, a caixa fica parada e o mundo cresce em volta dela
 export const camCaixa = (t: number, t0: number, tFim: number) => {
-  const entra = pT(t, t0, 0.6, io);
   const z = lerp(1.22, 1, pT(t, t0, 0.9)) * (1 + 0.07 * interpolate(t, [t0, tFim], [0, 1], cl));
   return {S: S0 * z, Q: {x: CENTRO.x * S0, y: CENTRO.y * S0 - 20}};
 };

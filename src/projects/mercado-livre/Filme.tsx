@@ -42,7 +42,7 @@ const SAI = 13.2, POUSA = 13.75, ROTA0 = 14.0, INCL1 = 14.8, ROTA1 = 16.45, MERG
 const BUSCA = "fone sem fio";
 
 // ---------- câmera do celular (coordenadas do corpo do celular; z = escala) ----------
-type K = [number, number, number, number, Easing?]; // t, z, fx, fy, easing do trecho que CHEGA nesta chave
+type K = [number, number, number, number, ((x: number) => number)?]; // t, z, fx, fy, easing do trecho que CHEGA nesta chave
 const cx1 = BORDA + CARTAO1.x + CARTAO1.w / 2, cy1 = BORDA + CARTAO1.y + 98;
 const HERO_Y = BORDA + 118 + 112 + 12 + 150;
 const FOCO_BOTAO = BORDA + BOTAO_Y - 40;
@@ -369,6 +369,25 @@ export const Filme: React.FC = () => {
           <path d={ESTRELA} fill="#141414" opacity={Math.min(1, eP * 3)} style={{filter: eP < 1 ? `blur(${(1 - eP) * 10}px)` : undefined}}
             transform={`translate(${esX},${esY}) rotate(${(1 - eP) * -35}) scale(${esS}) translate(0,-13)`} />
         </svg>
+      )}
+
+      {/* linha pequena no fim */}
+      {t >= TRAVA && (
+        <div style={{
+          position: "absolute",
+          bottom: 48,
+          left: 0,
+          right: 0,
+          textAlign: "center",
+          fontFamily: FONTE,
+          fontSize: 18,
+          fontWeight: 500,
+          color: "rgba(0,0,0,0.45)",
+          letterSpacing: 0.5,
+          opacity: interpolate(t, [TRAVA, TRAVA + 0.4], [0, 1], cl),
+        }}>
+          Anúncio conceito, não oficial.
+        </div>
       )}
     </AbsoluteFill>
   );

@@ -5,7 +5,7 @@
 // A música começa 2,3 s mais tarde (som v3), então a batida cai em 1,5 s, quando o logo acende. Às 2,4 s a câmera desce para o celular.
 import React from "react";
 import {AbsoluteFill, Easing, interpolate, random, useCurrentFrame} from "remotion";
-import {ML_AMARELO, ML_AZUL, NOME_D, SIMBOLO} from "./mlData";
+import {NOME_D, SIMBOLO} from "./mlData";
 
 const FPS = 30, W = 1920, H = 1080;
 export const CENA1_FRAMES = Math.round(2.4 * FPS);
