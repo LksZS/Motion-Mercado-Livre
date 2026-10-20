@@ -16,6 +16,7 @@ import {BH, BORDA, BOTAO, BOTAO_Y, BW, CARTAO1, FONTE, Full, ML, SH, SimboloML, 
 import {CamMapa, Mapa, pontoNaRota, ROTA, ROTA_LEN} from "./Mapa";
 import {Caixa, caixaNaTela, NotificacaoEntregue} from "./Caixa";
 import {CAP, ESTRELA, ESTRELA_H, ESTRELA_W, LETRAS, NOME_X0, NOME_X1} from "../../kit/supernova/logoData";
+import {EfeitosSonoros} from "./Som";
 
 const FPS = 30, W = 1920, H = 1080;
 // som v3: a música começa 2,3 s mais tarde na faixa (logo formado em 1,5 s). Os tempos abaixo seguem no relógio antigo (v2);
@@ -389,6 +390,9 @@ export const Filme: React.FC = () => {
           Anúncio conceito, não oficial.
         </div>
       )}
+
+      {/* efeitos sonoros sincronizados */}
+      <EfeitosSonoros />
     </AbsoluteFill>
   );
 };
